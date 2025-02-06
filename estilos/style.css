@@ -1,192 +1,277 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-/* Variables */
-
-:root {
-    --color-fondo:#FFCCEA;
-    --color-nav-footer:#CDC1FF;
-}
-
-/* Reset */
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*Variables*/
+/*Reset*/
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    background-color: var(--color-fondo);
+@media (max-width: 480px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
 }
-
-/* Barra de navegacion */
-
-header {
-    background-color:var(--color-nav-footer);
-    text-align: center;
-    font-size: 20px;
-}
-
-.logo{
-    height: 20vh;
-}
-
-/* Estilos de main de index*/
-
-.main-index {
-    background-image: url(../imagenes/fondo1.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    box-sizing: border-box;
-}
-
-.container-title {
-    font-size: 10vw;
-    text-align: center;
-}
-
-.container-parrafo{
-    font-size: 3vw;
-    text-align: center;
-}
-
-/* Estilos con flex y media query para el index */
-
-.container-flex{
-    display: flex;
+@media (max-width: 768px) {
+  .productos {
     flex-direction: column;
     align-items: center;
-}
-
-.productos {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.producto-favorito {
-    flex: 1;
-    text-align: center;
-    color: rgb(78, 73, 73);
-    font-family: "Open Sans", serif;
-    font-weight: 400;
-    font-size: 2rem;
-}
-
-.p-torta-fav{
-    font-size: 2rem;
-    color: rgb(78, 73, 73);
-    font-family: "Open Sans", serif;
-    font-weight: 400;
-}
-
-.section-title{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-size: 4vw;
-    color: rgb(78, 73, 73);
-    font-family: "Open Sans", serif;
-    font-weight: 700;
+  }
+  .p-torta-fav {
+    font-size: 5vw;
+  }
+  .section-title {
+    font-size: 6vw;
+  }
+  .sobre-nosotros h1 {
+    font-size: 2rem;
+  }
+  .sobre-nosotros p {
+    font-size: 1rem;
+  }
+}
+/*Estilos generales, barra de navegacion y footer*/
+body {
+  background-color: #e8d1b6;
 }
 
-.torta-fav{
-    height: 10rem;
-    width: 15rem;
+header {
+  background-color: #69140e;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Montserrat", serif;
+  color: #E8A87C;
 }
-/* Media query de index para dispositivos moviles */
-@media (max-width: 768px) {
-    .productos {
-      flex-direction: column;
-      align-items: center;
-      font-size: 4vw;
-    }
-
-    .p-torta-fav{
-        font-size: 5vw;
-        color: rgb(78, 73, 73);
-        font-family: "Open Sans", serif;
-        font-weight: 400;
-    }
-
-    .section-title{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 6vw;
-        color: rgb(78, 73, 73);
-        font-family: "Open Sans", serif;
-        font-weight: 700;
-    }
+header .logo {
+  height: 20vh;
+}
+header .nav-link {
+  color: #E8A87C;
+}
+header .nav-link:hover {
+  color: #A44200;
 }
 
-img{
-    height: 100px;
+/* Estilos de Index */
+.main-index {
+  background: url(../imagenes/fondo2.jpeg) center/cover no-repeat;
+  color: white;
+  box-sizing: border-box;
+}
+.main-index .container .container-title {
+  font-size: 10vw;
+  text-align: center;
+}
+.main-index .container .container-parrafo {
+  font-size: 3vw;
+  text-align: center;
+}
+
+/* Section de Index */
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-flex .section-title {
+  text-align: center;
+  font-size: 4vw;
+  color: rgb(78, 73, 73);
+  font-family: "Open Sans", serif;
+  font-weight: 700;
+}
+.container-flex .productos {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.container-flex .productos .producto-favorito, .container-flex .productos .p-torta-fav, .container-flex .productos .section-title {
+  flex: 1;
+  text-align: center;
+  color: rgb(78, 73, 73);
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.container-flex .productos .producto-favorito img, .container-flex .productos .p-torta-fav img, .container-flex .productos .section-title img {
+  height: 100px;
+}
+.container-flex .productos .producto-favorito .p-torta-fav, .container-flex .productos .p-torta-fav .p-torta-fav, .container-flex .productos .section-title .p-torta-fav {
+  font-size: 2rem;
+}
+.container-flex .productos .producto-favorito .torta-fav, .container-flex .productos .p-torta-fav .torta-fav, .container-flex .productos .section-title .torta-fav {
+  height: 10rem;
+  width: 15rem;
 }
 
 /* Footer con Grid */
-
 footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background-color: var(--color-nav-footer);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #69140e;
+  color: #E8A87C;
 }
-  
-.seccion-footer1 {
-    padding: 10px;
-    text-align:start;
-    border-radius: 5px;
+footer .seccion-footer1, footer .seccion-footer2, footer .seccion-footer3 {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
 }
-
-.seccion-footer2, .seccion-footer3 {
-    padding: 10px;
-    text-align:center;
-    border-radius: 5px;
+footer .seccion-footer1 h3, footer .seccion-footer2 h3, footer .seccion-footer3 h3 {
+  font-size: calc(1.3rem - 0.4vw);
 }
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
+footer .seccion-footer1 ul, footer .seccion-footer2 ul, footer .seccion-footer3 ul {
+  list-style-type: none;
+  padding: 0;
 }
-  
-footer li {
-    margin-bottom: 5px;
+footer .seccion-footer1 ul a, footer .seccion-footer2 ul a, footer .seccion-footer3 ul a {
+  color: #E8A87C;
+  text-decoration: none;
 }
-  
-footer a {
-    color:black;
-    text-decoration: none;
-}
-  
-footer h3 {
-    font-size: calc(1.3rem + -0.4vw);
+footer .seccion-footer1 ul a:hover, footer .seccion-footer2 ul a:hover, footer .seccion-footer3 ul a:hover {
+  color: #A44200;
 }
 
-/* Estilos Flex para la pagina sobre pasteles */
+/* Estilos página Sobre Nosotros */
+.sobre-nosotros {
+  background: url(../imagenes/cake-decorating-2209478_1280.jpg) center/cover no-repeat;
+  color: honeydew;
+  opacity: 0.8;
+  padding: 20px;
+}
+.sobre-nosotros h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.sobre-nosotros p {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
 
+/* Log In */
+.main-login {
+  background: url(../imagenes/bananas-282313_1280.jpg) center/cover no-repeat;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+form h1 {
+  margin-bottom: 20px;
+}
+form label {
+  margin: 10px 0 5px;
+}
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #69140e;
+  color: #E8A87C;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #A44200;
+}
+
+/* Página de Productos */
+.productos-h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: #C2714F;
+}
+
+.main-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.main-productos .producto {
+  background-color: #ecb06a;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.main-productos .producto img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.main-productos .producto h2, .main-productos .producto span {
+  color: #C2714F;
+}
+.main-productos .producto span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.main-productos .producto button {
+  background-color: #C2714F;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.main-productos .producto button:hover {
+  background-color: #a85c3d;
+}
+
+/* Pagina Sobre Pasteles */
 .sobre-pasteles-title {
-    text-align: center;
-    font-size: 4rem;
+  text-align: center;
+  font-size: 4rem;
 }
 
-.sobre-pasteles-container{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.sobre-pasteles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.sobre-pasteles-container .sobre-pasteles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #b16661;
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+.sobre-pasteles-container .sobre-pasteles img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10px;
 }
 
-.sobre-pasteles{
-    display: flex;
-    align-items: center;
-    gap: 10px;   
-    background-color: #FFF6E3;
-}
-
-
-.sobre-pasteles img{
-    width: 20rem;
-    height: 20rem;
-}
+/*# sourceMappingURL=style.css.map */

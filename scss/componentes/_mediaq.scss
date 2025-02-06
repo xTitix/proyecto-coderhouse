@@ -1,0 +1,31 @@
+@media (max-width: 480px) {
+    footer {
+      @include grid-layout(1);
+    }
+  }
+
+@media (max-width: 768px) {
+    .productos {
+      flex-direction: column;
+      align-items: center;
+      font-size: 4vw;
+    }
+  
+    .p-torta-fav {
+      font-size: 5vw;
+    }
+  
+    .section-title {
+      font-size: 6vw;
+    }
+    
+    .sobre-nosotros {
+      h1 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
