@@ -11,9 +11,9 @@
     align-items: center;
   }
   
-@mixin grid-layout($columns) {
-  display: grid;
-  grid-template-columns: repeat($columns, 1fr);
-  gap: 20px;
-  padding: 20px;
+  @mixin grid-layout($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: 20px;
+    padding: 20px;
   }

@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "componentes/variables";
 @import "componentes/mixins";
-@import "componentes/index";
-@import "componentes/sobrenosotros";
-@import "componentes/login";
-@import "componentes/productos";
-@import "componentes/sobrepasteles";
 @import "componentes/mediaq";
 
 /*Estilos generales, barra de navegacion y footer*/
@@ -28,6 +23,62 @@ header {
     color: $color-palabras;
     &:hover {
       color: $color-hover;
+    }
+  }
+}
+
+/* Estilos de Index */
+
+//Estilos main
+.main-index {
+  background: url(../imagenes/fondo2.jpeg) center/cover no-repeat;
+  color: white;
+  box-sizing: border-box;
+  .container{
+    .container-title {
+      font-size: 10vw;
+      text-align: center;
+    }
+    .container-parrafo {
+      font-size: 3vw;
+      text-align: center;
+    }
+  }
+}
+/* Section de Index */
+// Flex container
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .section-title{
+      text-align: center;
+      font-size: 4vw;
+      color: rgb(78, 73, 73);
+      font-family: "Open Sans", serif;
+      font-weight: 700;
+  }
+  .productos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .producto-favorito, .p-torta-fav, .section-title {
+      flex: 1;
+      text-align: center;
+      color: rgb(78, 73, 73);
+      font-family: "Open Sans", serif;
+      font-weight: 400;
+      font-size: 2rem;
+      img{
+        height: 100px;
+      }
+      .p-torta-fav {
+        font-size: 2rem;
+      }
+      .torta-fav {
+        height: 10rem;
+        width: 15rem;
+      }
     }
   }
 }
@@ -54,6 +105,151 @@ footer {
           color: $color-hover;
         }
       }
+    }
+  }
+}
+
+
+/* Estilos página Sobre Nosotros */
+.sobre-nosotros {
+  background: url(../imagenes/cake-decorating-2209478_1280.jpg) center/cover no-repeat;
+  color: honeydew;
+  opacity: 0.8;
+  padding: 20px;
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* Log In */
+.main-login {
+  background: url(../imagenes/bananas-282313_1280.jpg) center/cover no-repeat;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  label {
+    margin: 10px 0 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: $color-nav-footer;
+    color: $color-palabras;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+}
+
+/* Página de Productos */
+.productos-h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: #C2714F;
+}
+
+.main-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  .producto {
+    background-color: #ecb06a;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    h2, span {
+      color: #C2714F;
+    }
+    span {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #C2714F;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  
+      &:hover {
+        background-color: #a85c3d;
+      }
+    }
+  }
+}
+
+/* Pagina Sobre Pasteles */
+.sobre-pasteles-title {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.sobre-pasteles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .sobre-pasteles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $color-sobre-pasteles;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+  
+    img {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 10px;
     }
   }
 }
