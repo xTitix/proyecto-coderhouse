@@ -1,0 +1,26 @@
+ /* Pagina Sobre Pasteles */
+.sobre-pasteles-title {
+    text-align: center;
+    font-size: 4rem;
+  }
+  
+.sobre-pasteles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .sobre-pasteles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $color-sobre-pasteles;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    img {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 10px;
+    }
+  }
+}
