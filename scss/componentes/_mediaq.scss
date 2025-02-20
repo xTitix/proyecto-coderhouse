@@ -1,31 +1,49 @@
+//Footer mobile
 @media (max-width: 480px) {
     footer {
       @include grid-layout(1);
     }
   }
 
+
 @media (max-width: 768px) {
+  .container-flex{
+    .section-title {
+      font-size: 8vw;
+    }
     .productos {
       flex-direction: column;
       align-items: center;
       font-size: 4vw;
-    }
-  
-    .p-torta-fav {
-      font-size: 5vw;
-    }
-  
-    .section-title {
-      font-size: 6vw;
-    }
-    
-    .sobre-nosotros {
-      h1 {
-        font-size: 2rem;
-      }
-  
-      p {
-        font-size: 1rem;
+      .producto-favorito, .p-torta-fav, .section-title{
+        font-size: 3vh;
       }
     }
   }
+    
+  .sobre-nosotros {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 2vh;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sobre-pasteles {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    img {
+      margin-bottom: 10px;
+      order: 1;
+    }
+    p {
+      order: 2;
+    }
+  }
+}
