@@ -1,11 +1,31 @@
 //Footer mobile
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     footer {
       @include grid-layout(1);
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
+//Media query Inicio
+@media (max-width: 768px) {
+  .main-index {
+    .container{
+      height: auto;
+      .container-title {
+        font-size: 17vw;
+        text-align: center;
+      }
+      .container-parrafo {
+        font-size: 4vw;
+        text-align: center;
+        padding: 10px;
+      }
+    }
+  }
+}
 
+//Media query sobre nosotros
 @media (max-width: 768px) {
   .container-flex{
     .section-title {
@@ -32,7 +52,14 @@
   }
 }
 
+//Media query productos
+@media (max-width: 768px){
+  .productos-h1{
+    font-size: 4rem;
+  }
+}
 
+//Media query sobre pasteles
 @media (max-width: 768px) {
   .sobre-pasteles {
     flex-direction: column;

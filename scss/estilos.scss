@@ -37,7 +37,28 @@ footer {
   @include grid-layout(3);
   background-color: $color-nav-footer;
   color: $color-palabras;
-  .seccion-footer1, .seccion-footer2, .seccion-footer3 {
+  width: 100%;
+  box-sizing: border-box;
+  .seccion-footer1 {
+    padding: 10px;
+    text-align: start;
+    border-radius: 5px;
+    h3 {
+      font-size: calc(1.3rem + -0.4vw);
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      a {
+        color: $color-palabras;
+        text-decoration: none;
+        &:hover {
+          color: $color-hover;
+        }
+      }
+    }
+  }
+  .seccion-footer2, .seccion-footer3 { 
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -56,4 +77,4 @@ footer {
       }
     }
   }
-}
+ }

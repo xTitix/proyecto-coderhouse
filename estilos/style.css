@@ -59,9 +59,8 @@
 
 /* Estilos página Sobre Nosotros */
 .sobre-nosotros {
-  background: url(../imagenes/cake-decorating-2209478_1280.jpg) center/cover no-repeat;
+  background: url(../imagenes/fondo-sobre-nosotros.png) center/cover no-repeat;
   color: honeydew;
-  opacity: 0.8;
   padding: 20px;
 }
 .sobre-nosotros h1 {
@@ -197,12 +196,28 @@ form button:hover {
   border-radius: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   footer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  .main-index .container {
+    height: auto;
+  }
+  .main-index .container .container-title {
+    font-size: 17vw;
+    text-align: center;
+  }
+  .main-index .container .container-parrafo {
+    font-size: 4vw;
+    text-align: center;
+    padding: 10px;
   }
 }
 @media (max-width: 768px) {
@@ -222,6 +237,11 @@ form button:hover {
   }
   .sobre-nosotros p {
     font-size: 2vh;
+  }
+}
+@media (max-width: 768px) {
+  .productos-h1 {
+    font-size: 4rem;
   }
 }
 @media (max-width: 768px) {
@@ -268,24 +288,45 @@ footer {
   padding: 20px;
   background-color: #69140e;
   color: #E8A87C;
+  width: 100%;
+  box-sizing: border-box;
 }
-footer .seccion-footer1, footer .seccion-footer2, footer .seccion-footer3 {
+footer .seccion-footer1 {
+  padding: 10px;
+  text-align: start;
+  border-radius: 5px;
+}
+footer .seccion-footer1 h3 {
+  font-size: calc(1.3rem - 0.4vw);
+}
+footer .seccion-footer1 ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer .seccion-footer1 ul a {
+  color: #E8A87C;
+  text-decoration: none;
+}
+footer .seccion-footer1 ul a:hover {
+  color: #A44200;
+}
+footer .seccion-footer2, footer .seccion-footer3 {
   padding: 10px;
   text-align: center;
   border-radius: 5px;
 }
-footer .seccion-footer1 h3, footer .seccion-footer2 h3, footer .seccion-footer3 h3 {
+footer .seccion-footer2 h3, footer .seccion-footer3 h3 {
   font-size: calc(1.3rem - 0.4vw);
 }
-footer .seccion-footer1 ul, footer .seccion-footer2 ul, footer .seccion-footer3 ul {
+footer .seccion-footer2 ul, footer .seccion-footer3 ul {
   list-style-type: none;
   padding: 0;
 }
-footer .seccion-footer1 ul a, footer .seccion-footer2 ul a, footer .seccion-footer3 ul a {
+footer .seccion-footer2 ul a, footer .seccion-footer3 ul a {
   color: #E8A87C;
   text-decoration: none;
 }
-footer .seccion-footer1 ul a:hover, footer .seccion-footer2 ul a:hover, footer .seccion-footer3 ul a:hover {
+footer .seccion-footer2 ul a:hover, footer .seccion-footer3 ul a:hover {
   color: #A44200;
 }
 
